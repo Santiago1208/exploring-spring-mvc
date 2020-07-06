@@ -16,7 +16,7 @@ import com.bolsadeideas.springboot.web.app.models.User;
 @RequestMapping("/app")
 public class IndexController {
 	
-	@Value("label.indexController.title")
+	@Value("${label.indexController.title}")
 	private String title;
 	
 	@GetMapping({"/index", "/", "", "/home"})
