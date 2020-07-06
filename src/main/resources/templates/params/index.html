@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Params</title>
+</head>
+<body>
+	<ul>
+		<li>
+			<a th:href="@{/path-variable/string/} + ${'This is a demo variable'}">String path variable</a>
+		</li>
+		<li>
+			<a th:href="@{/path-variable/string/} + ${'This is a demo variable'} + '/' + ${'55'}">String and number path variable</a>
+		</li>
+	</ul>
+</body>
+</html>

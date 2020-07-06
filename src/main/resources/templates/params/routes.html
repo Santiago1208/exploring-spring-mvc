@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Routes</title>
+</head>
+<body>
+	<ul>
+		<li><a th:href="@{/params/string(text='Demo text')}">Click
+				Me!</a></li>
+		<li><a
+			th:href="@{/params/mix-params(greeting='Hello Spring', number=15)}">Greeting</a>
+		</li>
+		<li><a
+			th:href="@{/params/http-servlet-request(greeting='Hello Spring', number=15)}">Greeting
+				with HTTP Servlet request</a></li>
+	</ul>
+	<ul>
+		<li>
+			<a th:href="@{/path-variable/string/} + ${'This is a demo variable'}">String path variable</a>
+		</li>
+		<li>
+			<a th:href="@{/path-variable/string/} + ${'This is a demo variable'} + '/' + ${'55'}">String and number path variable</a>
+		</li>
+	</ul>
+</body>
+</html>
